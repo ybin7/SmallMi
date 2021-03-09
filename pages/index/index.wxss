@@ -1,0 +1,22 @@
+/* pages/login/login.wxss */
+
+.weixin {
+  width:200rpx;
+  margin-top:180rpx;
+  margin-left:275rpx;
+}
+.title {
+  text-align: center;
+  margin-top:70rpx;
+}
+.content {
+  text-align: center;
+  margin-top:34rpx;
+  font-size: 14px;
+  color:#888;
+}
+.btn-login {
+  margin-top: 60rpx;
+  margin-left: 50px;
+  margin-right: 50px;
+}

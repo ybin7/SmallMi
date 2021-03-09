@@ -1,0 +1,224 @@
+/* pages/orderConfirm/orderConfirm.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+/* 收货地址 */
+
+.order-goods-addressInformation {
+  width: 100%;
+  height: 190rpx;
+  background: #fff;
+  margin-top: -185rpx;
+}
+
+.order-goods-address {
+  position: absolute;
+  left: 40rpx;
+  margin-top: 10rpx;
+}
+
+.order-goods-addressModify {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 26rpx;
+  margin-top: -115rpx;
+}
+
+/* 分割线 */
+
+.order-goods-addressInformation .order-line {
+  margin-top: 74rpx;
+}
+
+.order-goods-address-items {
+  margin: 40rpx;
+  margin-top: 10rpx;
+  font-size: 32rpx;
+}
+
+.order-goods-address-item-address {
+  margin-top: 8rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+
+.order-goods-address-item-namePhone text:nth-child(2) {
+  padding-left: 40rpx;
+}
+
+.order-goods-address-item-address text:nth-child(2) {
+  padding-left: 10rpx;
+}
+
+/* 商品信息 */
+
+.order-goods-items {
+  width: 100%;
+  height: 478rpx;
+  margin-top: 15rpx;
+  background: #fff;
+}
+
+.order-goods-item {
+  margin-left: 40rpx;
+}
+
+.order-goods-title {
+  margin-left: 40rpx;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+}
+
+/* 分割线 */
+
+.order-line {
+  width: 92%;
+  height: 4rpx;
+  background: lightgray;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+}
+
+.order-goods-line {
+  width: 95%;
+  height: 4rpx;
+  background: lightgray;
+  /* margin-left: 40rpx; */
+  margin-top: 10rpx;
+}
+
+.order-goods-item image {
+  width: 100rpx;
+  height: 120rpx;
+  margin-top: 20rpx;
+}
+
+.order-goods-name {
+  position: absolute;
+  margin-top: -140rpx;
+  margin-left: 160rpx;
+  font-size: 30rpx;
+}
+
+.order-goods-number {
+  position: absolute;
+  margin-top: -92rpx;
+  margin-left: 160rpx;
+  font-size: 30rpx;
+}
+
+.order-goods-price {
+  position: absolute;
+  margin-top: -45rpx;
+  margin-left: 160rpx;
+  font-size: 30rpx;
+  color: #ff4a00;
+}
+
+/* 设置滚动区域 */
+
+scroll-view {
+  height: 342rpx;
+  margin-top: -10rpx;
+}
+
+.order-goods-totalprice {
+  position: absolute;
+  left: 420rpx;
+  margin-top: 6rpx;
+  font-size: 34rpx;
+}
+
+.order-goods-totalnumber {
+  position: absolute;
+  left: 40rpx;
+  margin-top: 6rpx;
+  font-size: 34rpx;
+}
+
+.order-goods-totalprice text:nth-child(2) {
+  color: #ff4a00;
+  font-size: 38rpx;
+}
+
+.order-goods-totalnumber text:nth-child(2) {
+  color: #ff4a00;
+  font-size: 38rpx;
+}
+
+/* 备注信息 */
+
+.order-remarkInformation {
+  margin-top: 15rpx;
+  width: 100%;
+  height: 262rpx;
+  background: #fff;
+}
+
+.order-remarkInformation-title {
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+}
+
+.order-remarkInformation .order-line {
+  margin-top: 10rpx;
+}
+
+.order-remarkInformation-content {
+  margin-top: 10rpx;
+}
+
+.order-remarkInformation-content textarea {
+  margin-left: 40rpx;
+  border: 1px solid #f2f2f2;
+  padding: 10rpx;
+  width: 670rpx;
+  height: 142rpx;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+
+.order-remarkInformation-length {
+  position: absolute;
+  right: 10rpx;
+  margin-top: -46rpx;
+  color: #c3c3c3;
+  font-size: 30rpx;
+}
+
+/* 按钮 */
+
+/* 将按钮固定在底部 */
+
+.order-submit {
+  width: 100%;
+  position: fixed;
+  bottom: 10rpx;
+}
+
+.order-submit-confirm {
+  color: #fff;
+  width: 90%;
+  height: 90rpx;
+  line-height: 90rpx;
+  position: relative;
+  letter-spacing: 8rpx;
+}
+
+.order-submit-cancel {
+  color: #fff;
+  width: 90%;
+  height: 90rpx;
+  line-height: 90rpx;
+  letter-spacing: 8rpx;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,37 @@
+<!-- pages/confirmPayment/confirmPayment.wxml -->
+<view class="pay">
+  <view class="tips">{{pay_tips}}</view>
+  <!-- 订单信息 -->
+  <view class="order-title">
+    <view class="order-number">
+      <text>订单编号：</text>
+      <text>{{orderRandonNo}}</text>
+    </view>
+
+    <view class="order-time">
+      <text>订单时间：</text>
+      <text decode="nbsp">{{orderDate}} &nbsp;&nbsp; {{orderTime}}</text>
+    </view>
+
+    <view class="order-price">
+      <text>订单金额：</text>
+      <text>¥{{orderGoodsTotal}}</text>
+    </view>
+
+  </view>
+  <!-- 支付方式 -->
+  <view class="orderPayment">
+    <view class="title">支付方式</view>
+    <view class="payWays" wx:for="{{orderpayment}}"  wx:key="{{index}}" data-payment-index="{{index}}" bindtap="changePayment">
+      <icon class="icon {{item.iconClass}} left" />
+      <view class="payName">{{item.name}}</view>
+      <view class="payInfo">{{item.info}}</view>
+      <icon class="icon checkbox {{item.selected ? 'checked' : ''}} right"/>
+    </view>
+  </view>
+</view>
+<!-- 支付 -->
+<view class="orderPayment-submit">
+  <button class="orderPayment-submit-confirm" type="warn" bindtap="orderPaymentConfirm">确认支付</button>
+  <button class="orderPayment-submit-cancel" style="background-color:#ffa500;" bindtap="orderPaymentCancel">取消支付</button>
+</view>

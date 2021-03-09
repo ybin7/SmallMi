@@ -1,0 +1,98 @@
+<!-- 授权登录部分 -->
+
+<view class="userinfo" hidden="{{isLogin}}">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-btn"> 点击授权 </button>
+  <block>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+
+
+</view>
+
+<view class="userinfo" hidden="{{hidden}}">
+  <block>
+    <image class="userinfo-avatar" background-size="cover" src="{{avatarUrl}}"></image>
+    <button class="loginButton" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击授权 </button>
+  </block>
+
+</view>
+
+
+<view class="separate"></view>
+
+<!-- 个人中心列表部分 -->
+<view class="person-list">
+
+  <view class="list-item-top">
+    <view class="list-item" bindtap='MyOrder'>
+      <image class="item-image" src="../../images/mine_img/mine_order.png"></image>
+      <text class="item-text">我的订单</text>
+      <view class='arrow'></view>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap='MyService'>
+      <image class="item-image" src="../../images/mine_img/mine_service.png"></image>
+      <text class="item-text">售后服务</text>
+      <view class='arrow'></view>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap='MyCoupon'>
+      <image class="item-image" src="../../images/mine_img/mine_coupon.png"></image>
+      <text class="item-text">优惠券</text>
+      <view class='arrow'></view>
+    </view>
+  </view>
+
+  <view class="list-item-middle">
+    <view class="list-item" bindtap='MyAddress'>
+      <image class="item-image" src="../../images/mine_img/mine_address.png"></image>
+      <text class="item-text">收货地址</text>
+      <view class='arrow'></view>
+    </view>
+
+
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap='Myinvoice'>
+      <image class="item-image" src="../../images/mine_img/mine_invoice.png"></image>
+      <text class="item-text">发票中心</text>
+      <view class='arrow'></view>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap='MySuggestion'>
+      <image class="item-image" src="../../images/mine_img/mine_suggestion.png"></image>
+      <text class="item-text">意见反馈</text>
+      <view class='arrow'></view>
+    </view>
+  </view>
+
+  <view class="list-item-bottom">
+    <view class="list-item" bindtap='MyCallPhone'>
+      <image class="item-image" src="../../images/mine_img/mine_call.png"></image>
+      <text class="item-text">联系客服</text>
+      <view class='arrow'></view>
+    </view>
+
+    <view class="person-line"></view>
+
+    <view class="list-item" bindtap='MyConcern'>
+      <image class="item-image" src="../../images/mine_img/mine_concern.png"></image>
+      <text class="item-text">关于我们</text>
+      <view class='arrow'></view>
+    </view>
+  </view>
+
+  
+
+</view>
+
+<!-- 退出登录部分 -->
+<button type="exit" class="btn-exit" style="background: #f04336;" bindtap="Myexit">退出</button>
+

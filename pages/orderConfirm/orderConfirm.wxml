@@ -1,0 +1,77 @@
+<!-- pages/orderConfirm/orderConfirm.wxml -->
+
+<view class="container">
+  <!-- 收货地址 -->
+  <view class="order-goods-addressInformation">
+    <view class="order-goods-address">我的地址</view>
+    <!-- 分割线 -->
+    <view class="order-line"></view>
+    <!-- 地址信息详情 -->
+    <view class="order-goods-address-items">
+      <view class="order-goods-address-item-namePhone">
+        <text>{{consignee}}</text>
+        <text>{{mobile}}</text>
+      </view>
+      <view class="order-goods-address-item-address">
+        <text>送至：</text>
+        <text>{{address}}</text>
+      </view>
+    </view>
+    <image class="order-goods-addressModify" src="../../images/order/address_modify.png" background-size="cover" bindtap="addressModify"></image>
+  </view>
+  <!-- 商品清单 -->
+  <view class="order-goods-items">
+    <view class="order-goods-title">商品清单</view>
+    <!-- 商品列表滚动区域 -->
+    <scroll-view scroll-y>
+      <!-- 分割线 -->
+      <view class="order-line"></view>
+      <!-- 商品列表 -->
+      <view class="order-goods-item" wx:for="{{orderList}}" wx:key="{{index}}">
+        <!-- <view wx:if="{{item.selected}}"> -->
+        <image src="{{item.cover}}" mode="aspectFill"></image>
+        <view class="order-goods-name">
+          <text>名称：</text>
+          <text>{{item.goods_name}}</text>
+        </view>
+        <view class="order-goods-number">
+          <text>数量：</text>
+          <text>{{item.select_num}}</text>
+        </view>
+        <view class="order-goods-price">
+          <text>价格：</text>
+          <text>{{item.price}}</text>
+        </view>
+        <!-- </view> -->
+        <!-- 分割线 -->
+        <view class="order-goods-line"></view>
+      </view>
+    </scroll-view>
+    <view class="order-goods-totalnumber">
+      <text>总件数：</text>
+      <text>{{orderGoodsTotalSum}}</text>
+    </view>
+    <view class="order-goods-totalprice">
+      <text>订单总额：</text>
+      <text>¥{{orderGoodsTotal}}</text>
+    </view>
+  </view>
+  <!-- 备注信息 -->
+  <view class="order-remarkInformation">
+    <view class="order-remarkInformation-title">备注信息（选填）</view>
+    <!-- 分割线 -->
+    <view class="order-line"></view>
+    <view class="order-remarkInformation-content">
+      <!-- 多行文本域 -->
+      <textarea placeholder="请在此处填写备注信息" focus bindinput="userInput" maxlength="50" placeholder-style="font-size:32rpx"></textarea>
+      <!-- 统计输入文本长度 -->
+      <view class="order-remarkInformation-length">（{{userInputLength}}/50）</view>
+    </view>
+  </view>
+</view>
+
+<view class="order-submit">
+  <button class="order-submit-confirm" type="warn" bindtap="orderConfirm">提交订单</button>
+  <button class="order-submit-cancel" style="background-color:#ffa500;" bindtap="orderCancel">取消订单</button>
+
+</view>

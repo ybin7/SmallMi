@@ -1,0 +1,30 @@
+<!-- pages/suggestions/suggestions.wxml -->
+
+<view class="contain">
+
+  <view class="suggestion-top">
+    <view class="questionSuggestion">您的问题或建议</view>
+    <view class="suggestion-content">
+      <textarea placeholder="请输入您遇到的问题或提出的建议" placeholder-style="font-size:32rpx" focus bindinput="suggestionInputValue" maxlength="200"></textarea>
+    </view>
+    <view class="suggestion-length">（{{userInputLength}}/200）</view>
+  </view>
+
+  <view class="suggestion-middle">
+    <view class="connectionWays">您的联系方式</view>
+    <view class="email">
+      <input placeholder="邮箱（选填）" placeholder-style="color:#808080"></input>
+    </view>
+    <view class="phone">
+      <input placeholder="手机（选填）" placeholder-style="color:#808080" maxlength="11"></input>
+    </view>
+
+    <view class="suggestion-info">
+      为了我们能够方便地了解您的问题或建议以及及时地给您反馈结果，请输入您的联系方式。
+    </view>
+  </view>
+
+  <view class="suggestion-bottom">
+    <view class='submit {{isDisabled ? "submiting" : ""}}' bindtap='{{isDisabled ? "":"submit"}}' hover-class="click">{{isDisabled ? "正在提交中":"提交"}}</view>
+  </view>
+</view>

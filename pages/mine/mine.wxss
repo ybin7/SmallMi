@@ -1,0 +1,102 @@
+/* pages/mine/mine.wxss */
+
+/* 授权登录 */
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgb(240, 20, 90), rgb(240, 23, 129), rgb(240, 23, 70));
+  width: 100%;
+  height: 300rpx;
+}
+
+.userinfo-btn {
+  margin-top: 48rpx;
+  background: none !important;
+  color: #fff !important;
+  font-size: 40rpx;
+  height: 120rpx;
+}
+
+.userinfo-avatar {
+  width: 108rpx;
+  height: 108rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+}
+
+.loginButton {
+  width: 240rpx;
+  height: 100rpx;
+  color: #fff !important;
+  margin-top: -8rpx;
+  background: none !important;
+}
+
+/* 个人中心部分 */
+
+.person-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: -10rpx;
+}
+
+.list-item-top, .list-item-middle, .list-item-bottom {
+  width: 100%;
+  margin-top: 10rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+}
+
+.item-image {
+  width: 36rpx;
+  height: 40rpx;
+  margin: 20rpx;
+  color: #f44336;
+}
+
+.item-text {
+  color: gray;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+
+.person-line {
+  width: 90%;
+  height: 3rpx;
+  background: lightgray;
+  margin-left: 20rpx;
+}
+
+.arrow {
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  position: absolute;
+  right: 66rpx;
+  transform: rotate(45deg);
+}
+
+.btn-exit {
+  width: 88%;
+  height: 80rpx;
+  color: #fff;
+  line-height: 80rpx;
+  position: relative;
+  letter-spacing: 8rpx;
+  margin-top: 22.5rpx;
+}

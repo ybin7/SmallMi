@@ -1,0 +1,58 @@
+/*设置页面整体布局*/
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar {
+  flex: none;
+  display: flex;
+  background: #fff;
+  height: 100rpx;
+  text-align: center;
+}
+
+.navbar .item {
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 14px;
+  color: #999;
+}
+
+/* 顶部导航字体颜色 */
+
+.navbar .item.active {
+  color: #f72c1c;
+}
+
+/* 顶部指示条属性 */
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rpx;
+  background: #f72c1c;
+  width: 70%;
+  margin: 0px auto;
+}
+
+.non-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.non-img {
+  width: 60%;
+  margin-top: 130rpx;
+  margin-bottom: 50rpx;
+  margin-left: -100rpx;
+}

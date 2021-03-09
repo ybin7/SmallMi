@@ -1,0 +1,8 @@
+<!-- pages/login/login.wxml -->
+
+<view class="container">
+  <image class="weixin" src="../../images/login_img/wx.png" mode="widthFix" />
+  <text class="title">微信授权页面</text>
+  <text class="content">授权并同意使用当前微信账号登录小程序</text>
+  <button wx:if="{{!hasUserInfo && canIUse}}" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="weui-btn btn-login">授权登录</button>
+</view>

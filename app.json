@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/categories/categories",
+    "pages/search/search",
+    "pages/cart/cart",
+    "pages/orderConfirm/orderConfirm",
+    "pages/confirmPayment/confirmPayment",
+    "pages/paymentStatus/paymentStatus",
+    "pages/mine/mine",
+    "pages/suggestions/suggestions",
+    "pages/channel/phone/phone",
+    "pages/channel/television/television",
+    "pages/channel/computer/computer",
+    "pages/goods/goods",
+    "pages/selectGoods/selectGoods",
+    "pages/order/order",
+    "pages/address/address",
+    "pages/addressList/addressList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f0145a",
+    "navigationBarTitleText": "你的二手书城",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#f0145a",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home_select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/categories/categories",
+        "iconPath": "images/icons/category.png",
+        "selectedIconPath": "images/icons/category_select.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "images/icons/cart.png",
+        "selectedIconPath": "images/icons/cart_select.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/icons/mine.png",
+        "selectedIconPath": "images/icons/mine_select.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

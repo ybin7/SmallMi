@@ -1,0 +1,42 @@
+<!--pages/categories/categories.wxml-->
+
+<view class="main">
+
+  <!-- 顶部搜索栏 -->
+  <view class="section searchBar">
+    <view class="section searBar-box {{isTap?'tap':''}}">
+      <image src="../../images/icons/search.png" mode="aspectFill" class="search-icon" />
+      <input type="text" name="searchBar" disabled="true" placeholder="搜索商城" placeholder-class="search-plac" bindtap="toSearch" />
+    </view>
+  </view>
+  <!-- end-section search searchBar -->
+
+  <view class="category-cont">
+    <scroll-view scroll-y class="category-left">
+      <!--当前项的id等于item项的id，那个就是当前状态-->
+      <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+      <view class="cate-nav-list {{curIndex===index?'active':''}}" wx:for="{{category_list}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory">
+        <text class="cate-name">{{item.title}}</text>
+      </view>
+    </scroll-view>
+
+    <!--scroll-view中的scroll-into-view属性不能为数字，否则会失效-->
+    <scroll-view class="category-right" scroll-y="{{true}}" scroll-into-view="{{SwitchPage}}" scroll-with-animation="true">
+      <view class="cate-content">
+        <view class="cate-list-content" wx:for="{{details}}" wx:key="{{item.id}}" id="{{item.id}}">
+          <view class="banner">
+            <image src="{{item.banner}}" bindtap="categoryGoods"/>
+          </view>
+          <view class="header">{{item.goods_name}}</view>
+          <view class="cate-list">
+            <view class="cate-item" wx:for="{{item.goods_list}}" wx:key="{{index}}" wx:for-item="goodsList">
+              <image src="{{goodsList.item_img}}" bindtap="categoryGoods"/>
+              <text>{{goodsList.item_name}}</text>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<!-- 切换栏 -->
+<!-- / 在组件上使用 wx:for 控制属性绑定一个数组，即可使用数组中各项的数据重复渲染该组件。默认数组的当前项的下标变量名默认为 index，数组当前项的变量名默认为 item。 -->
+<!-- 若没有订单 -->
+<view wx:if="{{order_list==''}}">
+  <!--导航栏-->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-index="{{index}}" class="item {{curIndex==index ? 'active' : ''}}" wx:key="{{index}}" bindtap="navbarTap">{{item}}</text>
+  </view>
+
+  <view class="non-order">
+    <image class="non-img" src="../../images/mine_img/mine_shoppingcart.png"></image>
+    <text>您还没有相关订单哦！</text>
+  </view>
+</view>
+
+<!-- 若有订单 -->
+<view wx:else>
+
+
+
+</view>

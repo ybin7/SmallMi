@@ -1,0 +1,133 @@
+/* pages/confirmPayment/confirmPayment.wxss */
+
+/* 支付说明 */
+.pay {
+  font-size: 28rpx;
+}
+
+.pay .tips {
+  color: #f5692e;
+  font-size: 24rpx;
+  padding: 20rpx 30rpx;
+}
+
+/* 订单信息 */
+.order-title {
+  background-color: #fff;
+  border: 1rpx solid #b9b9b9;
+  border-width: 1px 0;
+  padding: 20rpx 0;
+}
+
+.order-number, .order-time, .order-price {
+  padding: 10rpx 20rpx;
+  padding-left: 25rpx;
+  font-size: 32rpx;
+}
+
+.order-number text:nth-child(2), .order-time text:nth-child(2) {
+  color: #808080;
+}
+
+.order-price text:nth-child(2) {
+  color: #ff4a00;
+  position: absolute;
+  font-size: 36rpx;
+  margin-top: -6rpx;
+}
+
+/* 支付 */
+.orderPayment {
+  margin-top: 20rpx;
+  background-color: #fff;
+  border: 1rpx solid #b9b9b9;
+  border-width: 1px 0;
+}
+
+.orderPayment .title {
+  padding: 20rpx;
+  font-size: 32rpx;
+}
+
+.orderPayment .payWays {
+  padding: 20rpx 100rpx 20rpx 100rpx;
+  position: relative;
+}
+
+.orderPayment .payWays .payInfo {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.orderPayment .payWays .icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -30rpx;
+}
+
+.orderPayment .payWays .icon.left {
+  left: 20rpx;
+}
+
+.orderPayment .payWays .icon.right {
+  right: 20rpx;
+}
+
+.icon.weixinpay {
+  background-position: -400rpx -200rpx;
+}
+
+.icon.alipay {
+  background-position: -500rpx -880rpx;
+}
+
+.icon {
+  background-image: url(https://static.dmall.com/kayak-project/kayak-lib/dist/kayak-lib/globalstyle/sprt.png);
+  background-repeat: no-repeat;
+  background-size: 800rpx auto;
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+}
+
+.icon.checkbox {
+  background-position: -500rpx -300rpx;
+}
+
+.icon.checkbox.checked {
+  background-position: -400rpx -300rpx;
+}
+
+.order-line {
+  width: 99%;
+  height: 4rpx;
+  background: lightgray;
+  margin-left: -1rpx;
+  margin-top: 10rpx;
+}
+
+/* 将按钮固定在底部 */
+.orderPayment-submit {
+  width: 100%;
+  position: fixed;
+  bottom: 20rpx;
+}
+.orderPayment-submit-confirm {
+  color: #fff;
+  width: 90%;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+  letter-spacing: 8rpx;
+}
+.orderPayment-submit-cancel {
+  color: #fff;
+  width: 90%;
+  height: 100rpx;
+  line-height: 100rpx;
+  letter-spacing: 8rpx;
+  margin-top: 20rpx;
+}
+
+
+

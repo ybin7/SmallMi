@@ -1,0 +1,14 @@
+<!-- pages/paymentStatus/paymentStatus.wxml -->
+<view class="paymentStatus">
+  <view class="paymentHeader">
+    <image src="../../images/pay/pay_success.png"></image>
+    <view class="title">支付成功</view>
+    <view class="content">我们会尽快安排发货，请耐心等待哟 亲</view>
+    <view class="paymentBackground"></view>
+  </view>
+
+  <view class="paymentBtn">
+    <view class="back home" bindtap="backHome">回到首页</view>
+    <view class="back order" bindtap="viewOrderList">查看订单</view>
+  </view>
+</view>
